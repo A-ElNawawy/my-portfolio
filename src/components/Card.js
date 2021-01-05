@@ -281,12 +281,12 @@ function _Card({
           <p>{mainTech}</p>
         </div>
         <div className="line">
-          <label>For:</label>
-          <p>{For}{originProject? <a href={originProject} target="_blank" className="special-link"> This Project</a>: null}</p>
-        </div>
-        <div className="line">
           <label>Keywords:</label>
           <p>{Keywords}</p>
+        </div>
+        <div className="line">
+          <label>For:</label>
+          <p>{For}{originProject? <a href={originProject} target="_blank" className="special-link"> This Project</a>: null}</p>
         </div>
         <div className="action-buttons">
           <Button
