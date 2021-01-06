@@ -2,11 +2,12 @@ import styled, {css} from 'styled-components';
 // Props:
 // -----
 // maxWidth, border, imgHeight
-const input_border_color = "#e1e1e1";
-const input_shadow_color = "#c9c9c9";
 const gold_color = "#ae8648";
 const white_color = "#ffffff";
+const light_gray_color = "#efefef";
 
+const input_border_color = "#e1e1e1";
+const input_shadow_color = "#c9c9c9";
 const button_color = gold_color;
 const header_color = "#444";
 
@@ -73,43 +74,53 @@ const Card = styled.div`
       width: 100%;
       height: 100%;
     }
+    :hover{
+      img{
+        transform: scale(1.5)
+        rotate(10deg);
+      }
+      .link{
+        opacity: 1;
+      }
+      .over-lay{
+        opacity: .7;
+      }
+    }
   }
   .topic{
     padding: 0 20px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    & > *{
-      flex-basis: 100%;
-    }
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto 38px;
+    row-gap: 10px;
     a{
-        /* Resets */
-        display: block;
+      /* Resets */
+      display: block;
+      text-decoration: none;
+      box-sizing: border-box;
+      margin: 0;
+      color: inherit;
+      /* ------------- */
+      transition: all .3s ease-in-out;
+      :link {
         text-decoration: none;
-        box-sizing: border-box;
-        margin: 0;
-        color: inherit;
-        /* ------------- */
-        transition: all .3s ease-in-out;
-        :link {
-          text-decoration: none;
-        }
-        :visited {
-          text-decoration: none;
-        }
-        :hover {
-          text-decoration: none;
-          cursor: pointer;
-          color: ${button_color}
-        }
-        :active {
-          text-decoration: none;
-        }
       }
-      .special-link{
-        :link {
-          text-decoration: underline;
-        }
+      :visited {
+        text-decoration: none;
       }
+      :hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      :active {
+        text-decoration: none;
+      }
+    }
+    .special-link{
+      :link {
+        text-decoration: underline;
+      }
+    }
     h5{
       font-size: 25px;
       margin-bottom: 25px;
@@ -117,14 +128,35 @@ const Card = styled.div`
       ::first-letter{
         text-transform: capitalize;
       }
+      :hover{
+        cursor: pointer;
+        a{
+          color: ${button_color};
+        }
+      }
     }
     p{
       font-family: ${p_font_family};
       margin-left: 15px;
+      width: 235px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all .3s ease-in-out;
     }
     .line{
       display: flex;
-      margin-bottom: 20px;
+      :hover{
+        p{
+          white-space: normal;
+          overflow: visible;
+        }
+      }
+    }
+    .line:nth-child(even){
+      background-color: ${light_gray_color};
+      padding: 10px;
+      border-radius: 5px;
     }
     label{
       font-weight: bold;
@@ -140,25 +172,7 @@ const Card = styled.div`
       }
     }
   }
-  :hover{
-    .image{
-      img{
-        transform: scale(1.5)
-        rotate(10deg);
-      }
-      .link{
-        opacity: 1;
-      }
-      .over-lay{
-        opacity: .7;
-      }
-    }
-    .topic{
-      h5{
-        cursor: pointer;
-      }
-    }
-  }
+
 `;
 
 // Props:
@@ -247,15 +261,15 @@ function _Card({
   mainTech,
   For,
   originProject,
+  status,
   Keywords,
   url,
   codeUrl
 }) {
-
   return(
     <Card border className="Card">
       <div className="image">
-        <img src={img} alt={alt}></img>
+        <img src={`https://raw.githubusercontent.com/A-ElNawawy/my-gallery/master/${img}`} alt={alt}></img>
         <div className="link">
           <Button
             className="Button"
@@ -287,6 +301,10 @@ function _Card({
         <div className="line">
           <label>For:</label>
           <p>{For}{originProject? <a href={originProject} target="_blank" className="special-link"> This Project</a>: null}</p>
+        </div>
+        <div className="line">
+          <label>Status:</label>
+          <p>{status}</p>
         </div>
         <div className="action-buttons">
           <Button
