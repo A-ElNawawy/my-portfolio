@@ -125,9 +125,7 @@ const Card = styled.div`
       font-size: 25px;
       margin-bottom: 25px;
       text-align: center;
-      ::first-letter{
         text-transform: capitalize;
-      }
       :hover{
         cursor: pointer;
         a{
@@ -300,7 +298,15 @@ function _Card({
         </div>
         <div className="line">
           <label>For:</label>
-          <p>{For}{originProject? <a href={originProject} target="_blank" className="special-link"> This Project</a>: null}</p>
+          <p>
+            {For}
+            {
+              originProject?
+                <a href={originProject.url} target="_blank" className="special-link"> {originProject.text}</a>
+              :
+                null
+            }
+          </p>
         </div>
         <div className="line">
           <label>Status:</label>

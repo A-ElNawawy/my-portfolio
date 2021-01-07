@@ -6,7 +6,7 @@ export const projectsData = [
     description: "It Is An HR Application",
     mainTech: "Reactjs",
     For: "Taif-Alalmas Company",
-    originProject:"",
+    originProject: {},
     status: "Done",
     Keywords: "Reactjs, APIs, SaaS, ERP, Bilingual, NOT Responsive",
     url: "http://web.apex-program.com/#/Ar/TAW/Start/Login/Democompany",
@@ -19,9 +19,12 @@ export const projectsData = [
     description: "A Web Site for Restaurant with Menu, On Line Booking, Blog, Newsletter, Working Hours, Counters",
     mainTech:  "Reactjs",
     For: "Challenging to Make a Copy of",
-    originProject: "http://bliccathemes.com/themes/pronto/demo1/",
+    originProject: {
+      url: "http://bliccathemes.com/themes/pronto/demo1/",
+      text: "This Live Project"
+    },
     status: "In Progress",
-    Keywords: "Reactjs, PSD to HTML",
+    Keywords: "Reactjs, PSD to HTML, css-in-js, styled-components",
     url: "https://a-elnawawy.github.io/restaurant/",
     codeUrl: "https://github.com/A-ElNawawy/restaurant"
   },
@@ -32,7 +35,10 @@ export const projectsData = [
     description: "It Is My First Website Ever I Made",
     mainTech: "Pure HTML & CSS",
     For: "Challenging to Make a Copy of",
-    originProject: "https://raw.githubusercontent.com/A-ElNawawy/ResumeAfter/master/Images/focal-resume-psd-theme-image-2084focal-psd-theme.jpg",
+    originProject: {
+      url: "https://raw.githubusercontent.com/A-ElNawawy/ResumeAfter/master/Images/focal-resume-psd-theme-image-2084focal-psd-theme.jpg",
+      text: "This Theme"
+    },
     status: "Done",
     Keywords: "PSD to HTML, Responsive",
     url: "https://a-elnawawy.github.io/ResumeAfter/",
@@ -45,7 +51,7 @@ export const projectsData = [
     description: "It Is My Second Website Ever I Made",
     mainTech: "Pure HTML & CSS",
     For: "Training",
-    originProject:"",
+    originProject: {},
     status: "Done",
     Keywords: "PSD to HTML, Responsive",
     url: "https://a-elnawawy.github.io/ClassicAfter/",
@@ -57,8 +63,11 @@ export const projectsData = [
     header: "The First Freelancer Site for Women Only",
     description: "It Is My Third Website Ever I Made",
     mainTech: "Pure HTML & CSS",
-    For: "[ Elzero_Practice_07 ] It Is a Challenging Practice in Elzero Web School to Make ",
-    originProject: "https://github.com/Dsooky/Elzero/blob/master/Elzero%20ui.pdf?fbclid=IwAR3vQ9P1mBL-6JCI_dyIe4qQRYIIrbG5RURWf9CXLXzDZ8qNjRDY4yB7-Wc",
+    For: "[ Elzero_Practice_07 ] It Is a Challenging Practice in Elzero Web School to Make a copy of",
+    originProject: {
+      url: "https://github.com/Dsooky/Elzero/blob/master/Elzero%20ui.pdf?fbclid=IwAR3vQ9P1mBL-6JCI_dyIe4qQRYIIrbG5RURWf9CXLXzDZ8qNjRDY4yB7-Wc",
+      text: "This Theme"
+    },
     status: "Done",
     Keywords: "PSD to HTML, Responsive",
     url: "https://a-elnawawy.github.io/GlancerAfter/",
@@ -71,7 +80,7 @@ export const projectsData = [
     description: "A Blog With Newsletter Form Powered By Mailchimp, It Will Be Used As a Landing Page",
     mainTech: "Bootstrap, Built on Ready Theme",
     For: "New Mama Team",
-    originProject:"",
+    originProject: {},
     status: "Done",
     Keywords: "Responsive, Landing Page, Blog",
     url: "https://a-elnawawy.github.io/newmama/index.html",
@@ -84,7 +93,7 @@ export const projectsData = [
     description: "A Dash Board Shows Data of the Members of Robo Friends Club, This Data Fetched From [ jsonplaceholder.typicode.com/ ], and Images Generated From [ robohash.org ]",
     mainTech: "Reactjs",
     For: "It Is An Assignment Project on Reactjs",
-    originProject:"",
+    originProject: {},
     status: "Done",
     Keywords: "Reactjs, APIs, Responsive, Dash Board",
     url: "https://a-elnawawy.github.io/robo-friends-react-course/",
@@ -97,10 +106,26 @@ export const projectsData = [
     description: "A PSD to HTML Assignment",
     mainTech: "Reactjs",
     For: "It Is An Assignment Project on Reactjs",
-    originProject:"",
+    originProject: {},
     status: "In Progress",
     Keywords: "Reactjs, NOT Responsive",
     url: "https://a-elnawawy.github.io/super/",
     codeUrl: "https://github.com/A-ElNawawy/super"
+  },
+  {
+    img: "repoSearch.png",
+    alt: "repoSearch",
+    header: "Github Most Starred Repos",
+    description: "This app is to Get the most starred Github repos that were created in the last 30 days.",
+    mainTech: "Reactjs",
+    For: "This project is an implementation of a task offered by Gemography to evaluate people who apply for a frontend developer job. you can see full assignment",
+    originProject: {
+      url: "https://github.com/gemography/frontend-coding-challenge",
+      text: "here"
+    },
+    status: "Done",
+    Keywords: "Reactjs, APIs, Responsive, css-in-js, styled-components",
+    url: "https://a-elnawawy.github.io/gemography-f_e-challenge/",
+    codeUrl: "https://github.com/A-ElNawawy/gemography-f_e-challenge"
   },
 ]
