@@ -50,8 +50,11 @@ export const projectsData = [
     header: "A Portfolio Website for a Real Estate Company",
     description: "It Is My Second Website Ever I Made",
     mainTech: "Pure HTML & CSS",
-    For: "Training",
-    originProject: {},
+    For: "Challenging to Make a Copy of",
+    originProject: {
+      url: "http://psdbooster.com/product-preview/?previewcode=1019#fp-large_image",
+      text: "This Theme"
+    },
     status: "Done",
     Keywords: "PSD to HTML, Responsive",
     url: "https://a-elnawawy.github.io/ClassicAfter/",
@@ -105,8 +108,11 @@ export const projectsData = [
     header: "Carrefour Home Page",
     description: "A PSD to HTML Assignment",
     mainTech: "Reactjs",
-    For: "It Is An Assignment Project on Reactjs",
-    originProject: {},
+    For: "It Is An Assignment Project on Reactjs to make a copy of",
+    originProject: {
+      url: "https://raw.githubusercontent.com/A-ElNawawy/my-gallery/master/superMarketFull.png",
+      text: "This Theme"
+    },
     status: "In Progress",
     Keywords: "Reactjs, NOT Responsive",
     url: "https://a-elnawawy.github.io/super/",
