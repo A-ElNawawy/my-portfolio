@@ -1,6 +1,26 @@
 body{
   /*background-color: rgb(255, 255, 255);*/
 }
+a{
+  /* Resets */
+  text-decoration: none;
+  margin: 0;
+  color: inherit;
+  /* ------------- */
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active {
+  text-decoration: none;
+}
 main{
   color: #444;
   font-family: 'Lora', serif;
@@ -14,6 +34,15 @@ main h1{
 main p{
   font-family: 'Muli', sans-serif;
   font-size: 15px;
+}
+main a{
+  font-size: 30px;
+  padding: 20px;
+  color: gray;
+  transition: all .3s ease-in-out;
+}
+main a:hover{
+  color: black
 }
 section{
   padding-bottom: 40px;

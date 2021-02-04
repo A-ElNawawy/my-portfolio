@@ -14,6 +14,17 @@ function App() {
           <h1>Welcome to ElNawawy Portfolio</h1>
           <p>Here you will find each project I made.</p>
           <p>You can hover any field to read more about it.</p>
+          <address>
+            <a href="tel:+201019001377">
+              <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/A-ElNawawy" target="_blank" rel="noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-elnawawy-ae73/" target="_blank" rel="noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </address>
         </Container>
       </main>
       <section>
