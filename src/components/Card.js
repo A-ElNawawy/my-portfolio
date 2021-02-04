@@ -145,13 +145,14 @@ const Card = styled.div`
         font-size: 15px;
       }
       margin-left: 15px;
-      white-space: nowrap;
+      /*white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;*/
     }
     .line{
       display: flex;
+      padding: 10px;
       :hover{
         p{
           white-space: normal;
@@ -161,7 +162,6 @@ const Card = styled.div`
     }
     .line:nth-child(even){
       background-color: ${light_gray_color};
-      padding: 10px;
       border-radius: 5px;
     }
     label{
@@ -329,7 +329,7 @@ function _Card({
             color={white_color}
             fontSize="12px"
           >
-            <a href={url} target="_blank">Live Web Site</a>
+            <a href={url} target="_blank" rel="noreferrer">Live Web Site</a>
           </Button>
           {
             codeUrl?
@@ -340,7 +340,7 @@ function _Card({
                 color={white_color}
                 fontSize="12px"
               >
-                <a href={codeUrl} target="_blank">Project Code</a>
+                <a href={codeUrl} target="_blank" rel="noreferrer">Project Code</a>
               </Button>
             :
               null
