@@ -1,8 +1,20 @@
+body{
+  /*background-color: rgb(255, 255, 255);*/
+}
 main{
   color: #444;
   font-family: 'Lora', serif;
+  text-align: center;
+  line-height: 1.8;
+  padding: 30px 0;
+}
+main h1{
+  font-size: 20px;
 }
 main p{
   font-family: 'Muli', sans-serif;
-  font-size: 30px;
+  font-size: 15px;
+}
+section{
+  padding-bottom: 40px;
 }

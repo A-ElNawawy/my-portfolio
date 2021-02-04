@@ -21,25 +21,29 @@ const Card = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  max-width: ${props => props.maxWidth ? props.maxWidth : "400px"};
-  min-width: 250px;
-  ${props => props.border && css`
-    border: 1px solid ${input_border_color};
-    border-radius: 5px;
-    box-shadow: 0 5px 0 0 ${input_shadow_color};
-  `}
+  width: 300px;
+  @media (min-width: 400px){
+    width: 350px;
+  }
+  @media (min-width: 500px){
+    width: 400px;
+  }
+  border: 1px solid ${input_border_color};
+  border-radius: 5px;
+  box-shadow: 0 5px 0 0 ${input_shadow_color};
   > *{
     flex-basis: 100%;
   }
   .image{
     margin-bottom: 20px;
-    height: ${props => props.imgHeight? props.imgHeight : "235px"};
+    width: 100%;
+    height: 235px;
     overflow: hidden;
     position: relative;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #999;
+    box-shadow: 0px 5px 5px -2px #9fa0a2;
     img{
       width: 100%;
       height: 100%;
@@ -88,8 +92,9 @@ const Card = styled.div`
     }
   }
   .topic{
-    padding: 0 20px 20px;
+    padding: 0 10px 10px;
     display: grid;
+    width: 100%;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto 38px;
     row-gap: 10px;
@@ -122,8 +127,8 @@ const Card = styled.div`
       }
     }
     h5{
-      font-size: 25px;
-      margin-bottom: 25px;
+      font-size: 18px;
+      margin-bottom: 10px;
       text-align: center;
         text-transform: capitalize;
       :hover{
@@ -135,8 +140,11 @@ const Card = styled.div`
     }
     p{
       font-family: ${p_font_family};
+      font-size: 12px;
+      @media (min-width: 500px){
+        font-size: 15px;
+      }
       margin-left: 15px;
-      width: 235px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -158,6 +166,7 @@ const Card = styled.div`
     }
     label{
       font-weight: bold;
+      font-size: 12px;
       font-family: ${card_font_family};
     }
     button{
@@ -265,7 +274,7 @@ function _Card({
   codeUrl
 }) {
   return(
-    <Card border className="Card">
+    <Card className="Card">
       <div className="image">
         <img src={`https://raw.githubusercontent.com/A-ElNawawy/my-gallery/master/${img}`} alt={alt}></img>
         <div className="link">
@@ -277,13 +286,13 @@ function _Card({
             noBorder
             anchor
           >
-            <a href={url} target="_blank"><i className="fas fa-link"></i></a>
+            <a href={url} target="_blank" rel="noreferrer"><i className="fas fa-link"></i></a>
           </Button>
         </div>
         <div className="over-lay"></div>
       </div>
       <div className="topic">
-        <h5><a href={url} target="_blank">{header}</a></h5>
+        <h5><a href={url} target="_blank" rel="noreferrer">{header}</a></h5>
         <div className="line">
           <label>Description:</label>
           <p>{description}</p>
@@ -302,7 +311,7 @@ function _Card({
             {For}
             {
               originProject?
-                <a href={originProject.url} target="_blank" className="special-link"> {originProject.text}</a>
+                <a href={originProject.url} target="_blank" rel="noreferrer" className="special-link"> {originProject.text}</a>
               :
                 null
             }
@@ -318,6 +327,7 @@ function _Card({
             anchor
             backgroundColor={button_color}
             color={white_color}
+            fontSize="12px"
           >
             <a href={url} target="_blank">Live Web Site</a>
           </Button>
@@ -328,6 +338,7 @@ function _Card({
                 anchor
                 backgroundColor={button_color}
                 color={white_color}
+                fontSize="12px"
               >
                 <a href={codeUrl} target="_blank">Project Code</a>
               </Button>
