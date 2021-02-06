@@ -103,7 +103,7 @@ export const projectsData = [
     codeUrl: "https://github.com/A-ElNawawy/robo-friends-react-course"
   },
   {
-    img: "superMarket.png",
+    img: "superMarketHead.png",
     alt: "Super Market",
     header: "Carrefour Home Page",
     description: "A PSD to HTML Assignment",
