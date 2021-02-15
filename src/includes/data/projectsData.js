@@ -134,4 +134,17 @@ export const projectsData = [
     url: "https://a-elnawawy.github.io/gemography-f_e-challenge/",
     codeUrl: "https://github.com/A-ElNawawy/gemography-f_e-challenge"
   },
+  {
+    img: "charts.png",
+    alt: "Charts",
+    header: "Pie, Poler Area and Doughnut Charts",
+    description: "To create charts displays data in deferent ways",
+    mainTech: "Pure HTML, CSS, JS",
+    For: "",
+    originProject: {},
+    status: "Done",
+    Keywords: "Responsive",
+    url: "https://a-elnawawy.github.io/charts/",
+    codeUrl: "https://github.com/A-ElNawawy/charts"
+  },
 ]
